@@ -1,0 +1,189 @@
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-soft) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 44px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.home-hero__text {
+  min-width: 0;
+}
+
+
+.home-hero__title {
+  font-size: clamp(1.65rem, 5vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+
+.home-hero__subtitle {
+  color: var(--text-muted);
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  line-height: 1.7;
+  max-width: 100%;
+}
+
+.home-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 36px;
+  margin-top: 28px;
+}
+
+.home-hero__stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-hero__stat-num {
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  font-weight: 800;
+  color: var(--secondary);
+  line-height: 1;
+}
+
+.home-hero__stat-label {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Featured doctor card */
+.home-hero__card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(var(--shadow-teal), 0.12);
+  width: 100%;
+  max-width: 400px;
+  justify-self: end;
+}
+
+.home-hero__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 2;
+  width: fit-content;
+  max-width: calc(100% - 28px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  color: var(--secondary-dark);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  line-height: 1.3;
+}
+
+.home-hero__photo {
+  width: 100%;
+  aspect-ratio: 4 / 3.4;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.home-hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero__card-body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.home-hero__surname {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  line-height: 1.25;
+  word-wrap: break-word;
+}
+
+.home-hero__name {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.home-hero__position {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.home-hero__btn {
+  margin-top: 16px;
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px;
+  }
+
+  .home-hero__card {
+    max-width: 420px;
+    justify-self: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .home-hero__card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .home-hero__stats {
+    gap: 20px 28px;
+    margin-top: 22px;
+  }
+
+  .home-hero__badge {
+    font-size: 0.68rem;
+    top: 10px;
+    left: 10px;
+  }
+
+  .home-hero__card-body {
+    padding: 14px 16px 18px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-hero__card {
+    transition: box-shadow 0.2s ease;
+  }
+}

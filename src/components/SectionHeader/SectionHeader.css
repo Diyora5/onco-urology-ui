@@ -1,0 +1,25 @@
+.section-header {
+  margin-bottom: 18px;
+}
+
+.section-header__title {
+  font-size: clamp(1.15rem, 3vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  line-height: 1.25;
+  word-wrap: break-word;
+}
+
+.section-header__subtitle {
+  margin-top: 5px;
+  color: var(--text-muted);
+  font-size: clamp(0.88rem, 2.5vw, 0.93rem);
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    margin-bottom: 14px;
+  }
+}

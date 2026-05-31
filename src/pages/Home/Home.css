@@ -1,0 +1,88 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.home__doctors {
+  margin-top: clamp(28px, 5vw, 44px);
+}
+
+.home__doctors-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.home__doctors-head > div {
+  min-width: 0;
+  flex: 1 1 200px;
+}
+
+.home__subtitle {
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: clamp(0.88rem, 2.5vw, 0.95rem);
+  line-height: 1.5;
+}
+
+.home__count {
+  flex-shrink: 0;
+  background: var(--secondary-soft);
+  color: var(--secondary-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Loading skeletons */
+.home-hero-skeleton {
+  height: clamp(220px, 40vw, 280px);
+  border-radius: var(--card-radius);
+  margin-bottom: clamp(28px, 5vw, 44px);
+}
+
+.home__card-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.home__card-skeleton-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--card-radius);
+}
+
+.home__card-skeleton-line {
+  height: 14px;
+  border-radius: 6px;
+}
+
+.home__card-skeleton-line.short {
+  width: 60%;
+}
+
+@media (max-width: 600px) {
+  .home__doctors-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .home__count {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-skeleton {
+    border-radius: 14px;
+  }
+}

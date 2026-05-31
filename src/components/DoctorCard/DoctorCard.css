@@ -1,0 +1,112 @@
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  min-width: 0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .doctor-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(var(--shadow-teal), 0.14);
+    border-color: var(--border);
+  }
+
+  .doctor-card:hover .doctor-card__image img {
+    transform: scale(1.05);
+  }
+}
+
+.doctor-card__media {
+  display: block;
+}
+
+.doctor-card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.doctor-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.doctor-card__body {
+  padding: 16px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.doctor-card__name-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.doctor-card__surname {
+  font-size: clamp(1rem, 2.5vw, 1.08rem);
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+  word-wrap: break-word;
+}
+
+.doctor-card__name {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  word-wrap: break-word;
+}
+
+.doctor-card__position {
+  margin-top: 6px;
+  font-size: 0.86rem;
+  color: var(--secondary);
+  font-weight: 600;
+  line-height: 1.35;
+  word-wrap: break-word;
+}
+
+.doctor-card__department {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.doctor-card__btn {
+  margin-top: 14px;
+  width: 100%;
+}
+
+@media (max-width: 520px) {
+  .doctor-card {
+    border-radius: 14px;
+  }
+
+  .doctor-card__body {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .doctor-card__image {
+    aspect-ratio: 4 / 3.5;
+  }
+}
